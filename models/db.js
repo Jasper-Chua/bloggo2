@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const userModel = require('../models/UsersModel.js');
-const url = 'mongodb://localhost:27017/Bloggo';
+const {dbURL} = require('../config');
+const url = dbURL;
 
 const options = {
     useUnifiedTopology: true,

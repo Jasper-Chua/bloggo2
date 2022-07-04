@@ -10,7 +10,7 @@ const flash = require('connect-flash');
 const MongoStore = require('connect-mongo')(session);
 const mongoose = require('./models/connection');
 const fileUpload = require('express-fileupload');
-
+const { envPort, sessionKey } = require('./config');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true}));
 
@@ -22,7 +22,7 @@ app.use(fileUpload());
 db.connect();
 
 app.use(session({
-    secret: 'Jasperlikeshotdogs',
+    secret: sessionKey,
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
     resave: false,
     saveUninitialized: true,
@@ -42,7 +42,7 @@ app.use('/', routes);
 app.use('/', authRouter);
 
 
-app.listen(3000, 'Localhost', function(){
+app.listen(envPort, 'Localhost', function(){
     console.log('Connected to Localhost:3000');
 })
 
