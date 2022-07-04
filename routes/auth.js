@@ -1,7 +1,7 @@
-const router = require('express').Router();
-const userController = require('../controllers/usercontrollers');
-const { registerValidation, loginValidation, profileValidation, blogValidation } = require('../validators.js');
-const { isPublic, isPrivate } = require('../middlewares/checkAuth');
+import router from 'express';
+import userController from '../controllers/usercontrollers';
+import { registerValidation, loginValidation, profileValidation, blogValidation } from '../validators.js';
+import { isPublic, isPrivate } from '../middlewares/checkAuth';
 
 router.get('/login', isPublic, (req, res) => {
   res.render('login');

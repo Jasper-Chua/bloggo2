@@ -1,4 +1,4 @@
-const mongoose = require('./connection');
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
     username: { 

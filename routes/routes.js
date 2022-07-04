@@ -1,7 +1,7 @@
-const express = require('express');
-const controller = require('../controllers/controller.js');
-const { isPublic, isPrivate } = require('../middlewares/checkAuth');
-const { blogValidation } = require('../validators.js');
+import express from 'express';
+import controller from '../controllers/controller.js';
+import { isPublic, isPrivate } from '../middlewares/checkAuth';
+import { blogValidation } from '../validators.js';
 const app = express();
 
 app.get('/favicon.ico', controller.getFavicon);

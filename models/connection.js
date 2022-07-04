@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const databaseURL = 'mongodb://localhost:27017/Bloggo';
+import mongoose from 'mongoose';
+import {dbURL} from '../config';
+const databaseURL = dbURL;
 
 const options = { useNewUrlParser: true,
   useUnifiedTopology: true,

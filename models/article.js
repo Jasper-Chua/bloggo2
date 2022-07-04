@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 var articleSchema = new mongoose.Schema({
   owner: {

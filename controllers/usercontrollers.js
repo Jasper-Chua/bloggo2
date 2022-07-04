@@ -1,11 +1,11 @@
-const userModel = require('../models/UsersModel.js');
-const Comments = require('../models/comments.js');
-const Likes = require('../models/likes.js');
-const Post = require('../models/article.js');
-const { validationResult } = require('express-validator');
-const bcrypt = require('bcrypt');
-const db = require('../models/db.js'); 
-const ObjectId = require('mongodb').ObjectId;  
+import userModel from '../models/UsersModel.js';
+import Comments from '../models/comments.js';
+import Likes from '../models/likes.js';
+import Post from '../models/article.js';
+import { validationResult } from 'express-validator';
+import bcrypt from 'bcrypt';
+import db from '../models/db.js'; 
+import ObjectId  from ('mongodb').ObjectId;  
 
 exports.registerUser = (req, res) => {
 

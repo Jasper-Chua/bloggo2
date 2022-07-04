@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const userModel = require('../models/UsersModel.js');
-const {dbURL} = require('../config');
+import mongoose from 'mongoose';
+import userModel from '../models/UsersModel.js';
+import {dbURL} from '../config';
 const url = dbURL;
 
 const options = {

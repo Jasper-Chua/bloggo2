@@ -1,11 +1,11 @@
-const db = require('../models/db.js');
-const Profile = require('../models/UsersModel.js');
-const Post = require('../models/article.js');
-const Comments = require('../models/comments.js');
-const Likes = require('../models/likes.js');
-const ObjectId = require('mongodb').ObjectId;
-const { validationResult } = require('express-validator');
-const path = require('path');
+import db from '../models/db.js';
+import Profile from '../models/UsersModel.js';
+import Post from '../models/article.js';
+import Comments from '../models/comments.js';
+import Likes from '../models/likes.js';
+import ObjectId from 'mongodb';
+import { validationResult } from 'express-validator';
+import path from 'path';
 
 
 const controller = {
