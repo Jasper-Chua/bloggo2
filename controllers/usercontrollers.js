@@ -3,7 +3,7 @@ const Comments = require('../models/comments.js');
 const Likes = require('../models/likes.js');
 const Post = require('../models/article.js');
 const { validationResult } = require('express-validator');
-const bcrypt = require('bcrypt');
+import bcrypt from 'bcrypt';
 const db = require('../models/db.js'); 
 const ObjectId = require('mongodb').ObjectId;  
 
